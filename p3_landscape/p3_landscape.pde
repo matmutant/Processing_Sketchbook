@@ -33,8 +33,11 @@ void draw() {
     yoff += 0.05;
   }
   background(0);
-  stroke(255);
-  noFill();
+  //stroke(255);
+  //noFill();
+  noStroke();
+  fill(255);
+  lights();
   translate(-w/2, -h/2);
 
   for (int y = 0; y < rows-1; y++) {
