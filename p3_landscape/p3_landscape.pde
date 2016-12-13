@@ -64,9 +64,15 @@ void draw() {
   //draw mountains
   mo.hills();
   //draw landscape borders
-  //stripped borders (profile)
-  bor.borderOYs();
-  bor.borderOXs();
+  //stripped borders (profile), uncomment to use
+  //bor.borderOYs();
+  //bor.borderOXs();
+  
+  //solid borders
+  bor.borderOXf(ming);
+  bor.borderOYf(ming);
+  bor.borderrowsXf(ming);
+  bor.bordercolsYf(ming);
   //draw water
   //translate to water level
   translate(0,0,wl);
