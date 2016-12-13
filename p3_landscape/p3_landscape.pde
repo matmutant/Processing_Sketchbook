@@ -52,7 +52,7 @@ void draw() {
 
 
   //draw scales lines
-  scli.sclines();
+  //scli.sclines();
   //draw mountains
   mo.hills();
   //draw landscape borders
@@ -71,4 +71,8 @@ void draw() {
   wat.waterFill();
   //undo water level translation
   translate (0,0,-wl);
+  wat.waterBorderOX();
+  wat.waterBorderrowsX();  
+  wat.waterBorderOY();
+  wat.waterBordercolsY();
 }
