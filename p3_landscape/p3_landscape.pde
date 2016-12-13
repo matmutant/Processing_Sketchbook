@@ -3,6 +3,8 @@ import peasy.*;
 
 int cols, rows;
 int scl = 10;
+//water level
+int wl = scl * 2;
 int w = 1800;
 int h = 900;
 //min an max ground level
@@ -40,6 +42,16 @@ void draw() {
   lights();
   translate(-w/2, -h/2);
 
+  //scale lines
+  stroke(255,0,0);
+  line(0 ,0 ,0 ,w ,0 , 0);
+  stroke(0,255,0);
+  line(0 ,0 ,0 ,0 ,h , 0);  
+  stroke(0,0,255);
+  line(0 ,0 ,0 ,0 ,0 , 600);
+  noStroke();
+  
+  //Mountains
   for (int y = 0; y < rows-1; y++) {
     beginShape(TRIANGLE_STRIP);
     for (int x = 0; x < cols; x++) {
@@ -48,4 +60,8 @@ void draw() {
     }
     endShape();
   }
+  //draw water
+  translate(0,0,wl);
+  fill(10,10,200,80);
+  rect(0,0,w,h);
 }
