@@ -16,6 +16,7 @@ PeasyCam cam;
 Mountains mo;
 scaleLines scli;
 water wat;
+borders bor;
 
 void setup () {
   size(600, 600, P3D);
@@ -26,6 +27,7 @@ void setup () {
   mo = new Mountains();
   scli = new scaleLines();
   wat = new water();
+  bor = new borders();
 }
 
 void draw() {
@@ -61,6 +63,10 @@ void draw() {
   scli.sclines();
   //draw mountains
   mo.hills();
+  //draw landscape borders
+  //stripped borders (profile)
+  bor.borderOYs();
+  bor.borderOXs();
   //draw water
   //translate to water level
   translate(0,0,wl);
