@@ -54,4 +54,10 @@ class borders {
     }
     endShape();
   }
+  void borderBottom(int bottom){
+    fill(115);
+    translate(0,0,bottom);
+    rect(0 , 0, cols*scl-scl, rows*scl-scl);
+    translate(0,0,-bottom);
+  }
 }

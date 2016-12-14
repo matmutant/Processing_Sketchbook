@@ -17,6 +17,7 @@ Mountains mo;
 scaleLines scli;
 water wat;
 borders bor;
+Lights lit;
 
 void setup () {
   size(600, 600, P3D);
@@ -28,6 +29,7 @@ void setup () {
   scli = new scaleLines();
   wat = new water();
   bor = new borders();
+ lit = new Lights();
 }
 
 void draw() {
@@ -47,9 +49,10 @@ void draw() {
   //noFill();
   noStroke();
   fill(255);
-  lights();
+  //light settings, omnilight or emulated sun/moon
+  //lights();
+  lit.sunMoon();
   translate(-w/2, -h/2);
-
 
   //draw scales lines
   //scli.sclines();
@@ -65,6 +68,7 @@ void draw() {
   bor.borderOYf(ming);
   bor.borderrowsXf(ming);
   bor.bordercolsYf(ming);
+  bor.borderBottom(ming);
   //draw water
   //translate to water level
   translate(0,0,wl);
@@ -75,4 +79,5 @@ void draw() {
   wat.waterBorderrowsX();  
   wat.waterBorderOY();
   wat.waterBordercolsY();
+
 }
