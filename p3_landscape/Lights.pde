@@ -1,4 +1,7 @@
 class Lights {
+  void Omni(){
+   ambientLight(20,20,20); 
+  }
   void sunMoon() {
       //test sun
   
@@ -18,7 +21,7 @@ class Lights {
   // The Moon
   fill(255,255,255);
   ellipse(0, -rows*sunDist/2*scl, 50, 50);
-  pointLight(100, 100, 100, 0, -rows*sunDist*scl,0);
+  pointLight(20, 20, 20, 0, -rows*sunDist*scl,0);
   popMatrix();
   
     }

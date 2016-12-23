@@ -51,7 +51,9 @@ void draw() {
   fill(255);
   //light settings, omnilight or emulated sun/moon
   //lights();
+  lit.Omni();
   lit.sunMoon();
+ //Center terrain
   translate(-w/2, -h/2);
 
   //draw scales lines
@@ -71,10 +73,11 @@ void draw() {
   bor.borderBottom(ming);
   //draw water
   //translate to water level
+  pushMatrix();
   translate(0,0,wl);
   wat.waterFill();
-  //undo water level translation
-  translate (0,0,-wl);
+  popMatrix();
+
   wat.waterBorderOX();
   wat.waterBorderrowsX();  
   wat.waterBorderOY();

@@ -1,13 +1,10 @@
 class water {
  void waterFill() {
   noStroke();
-  //translate(0,0,wl);
   fill(10,10,200,80);
   rect(0,0,cols*scl-scl,rows*scl-scl);
  }
  void waterBorderOX() {
-  //undo water level translation
-  //translate (0,0,-wl);
   //draw shape
   beginShape(TRIANGLE_STRIP);
   for (int x = 0; x < cols; x++) {
@@ -23,8 +20,6 @@ class water {
   endShape();
  }
  void waterBorderOY() {
-  //undo water level translation
-  //translate (0,0,-wl);
   //draw shape
   beginShape(TRIANGLE_STRIP);
   for (int y = 0; y < rows; y++) {
@@ -40,8 +35,6 @@ class water {
   endShape();
  }
  void waterBorderrowsX() {
-  //undo water level translation
-  //translate (0,0,-wl);
   //draw shape
   beginShape(TRIANGLE_STRIP);
   for (int x = 0; x < cols; x++) {
@@ -57,8 +50,6 @@ class water {
   endShape();
  }
  void waterBordercolsY() {
-  //undo water level translation
-  //translate (0,0,-wl);
   //draw shape
   beginShape(TRIANGLE_STRIP);
   for (int y = 0; y < rows; y++) {
